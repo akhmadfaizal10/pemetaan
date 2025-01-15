@@ -1,6 +1,10 @@
 // Inisialisasi peta dengan zoom tanpa batas
-const map = L.map('map', { minZoom: 1, maxZoom: 22 }).setView([0, 0], 2);
-
+//const map = L.map('map', { minZoom: 1, maxZoom: 22 }).setView([0, 0], 2);
+const map = L.map('map', {
+  center: [-7.0035, 110.4381],
+  zoom: 16,
+  maxZoom: 22,
+});
 // Tambahkan tile OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
