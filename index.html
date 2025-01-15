@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSM Area Calculator</title>
+
+  <!-- CDN Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.5/proj4.js"></script>
+
+  <!-- CDN Math.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.3.1/math.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Peta -->
+  <div id="map"></div>
+
+  <!-- Input Nama Kota -->
+  <div id="cityInput">
+    <label for="cityName">Masukkan Nama Kota:</label>
+    <input type="text" id="cityName" placeholder="Contoh: Yogyakarta" />
+    <button id="goToCity">Cari</button>
+  </div>
+
+  <!-- Informasi -->
+  <div class="info">
+    <p><strong>Luas:</strong> <span id="area">0</span> m²</p>
+    <button id="reset">Reset</button>
+  </div>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>
